@@ -1,0 +1,9 @@
+# compiled output
+/.cache
+/dist
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
