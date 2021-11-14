@@ -32,7 +32,7 @@ export default `
             {{else}}
             <label>
               Выбрать файл на компьютере
-              <input type="file">
+              <input type="file" name="avatar">
             </label>
             {{/if}}
           </div>

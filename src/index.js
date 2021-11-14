@@ -2,7 +2,7 @@ import "./scss/styles.scss";
 import login from "./pages/auth/login/login";
 import registration from "./pages/auth/registration/registration";
 import profile from "./pages/profile/profile";
-import profileUpdate from "./pages/profile/profile-update/profile-update";
+import profileUpdatePassword from "./pages/profile/profile-update-password/profile-update-password";
 import error404 from "./pages/error/error-404/error-404";
 import error500 from "./pages/error/error-500/error-500";
 
@@ -18,8 +18,8 @@ window.addEventListener("hashchange", () => {
       return (view.innerHTML = registration);
     case "#profile":
       return (view.innerHTML = profile);
-    case "#profileUpdate":
-      return (view.innerHTML = profileUpdate);
+    case "#profile-update-password":
+      return (view.innerHTML = profileUpdatePassword);
     case "#error404":
       return (view.innerHTML = error404);
     case "#error500":
@@ -29,4 +29,4 @@ window.addEventListener("hashchange", () => {
   }
 });
 
-view.innerHTML = profile;
+view.innerHTML = profileUpdatePassword;

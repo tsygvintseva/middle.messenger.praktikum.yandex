@@ -4,6 +4,7 @@ import "./profile.scss";
 import "../../components/avatar/avatar";
 import "../../components/input-profile/input-profile";
 import "../../components/link/link";
+import "../../components/button/button";
 
 const profile = Handlebars.compile(profileTemplate);
 
@@ -59,16 +60,10 @@ const data = {
       disabled: true,
     },
   ],
-  link: [
-    {
-      linkHref: "#profileUpdate",
-      linkText: "Изменить данные",
-    },
-    {
-      linkHref: "",
-      linkText: "Изменить пароль",
-    },
-  ],
+  profileNotChange: true,
+  linkHref: "",
+  linkText: "Изменить пароль",
+  buttonText: "Сохранить",
 };
 
 export default profile(data);

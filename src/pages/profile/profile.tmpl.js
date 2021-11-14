@@ -7,7 +7,10 @@ export default `
     
       <form action="" method="post">
         {{> avatar}}
+                
+        {{#if profileNotChange}}
         <p class="profile__name">{{name}}</p>
+        {{/if}}
         
         <div class="profile__wrapper">
           {{#each inputProfile}}
@@ -16,16 +19,21 @@ export default `
         </div>
       </form>
       
+      {{#if profileNotChange}} 
       <ul class="profile__link-list">
-        {{#each link}}
+        <li>
+          <button class="link">Изменить данные</button>
+        </li>
         <li>
           {{> link}} 
         </li>   
-        {{/each}} 
         <li>
           <button class="link link--alert">Выйти</button>
         </li>
       </ul>
+      {{else}}
+      {{> button}}
+      {{/if}}
 
     </section>
   </div>
