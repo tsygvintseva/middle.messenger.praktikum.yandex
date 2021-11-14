@@ -1,5 +1,5 @@
 import Handlebars from "handlebars";
-import errorTemplate from "./error500.tmpl";
+import errorTemplate from "./error-500.tmpl";
 import "../error.scss";
 
 const error500 = Handlebars.compile(errorTemplate);

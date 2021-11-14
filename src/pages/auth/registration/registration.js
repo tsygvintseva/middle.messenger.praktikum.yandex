@@ -54,6 +54,7 @@ const data = {
     },
   ],
   buttonText: "Зарегистрироваться",
+  buttonType: "submit",
   linkHref: "/#login",
   linkText: "Войти",
 };

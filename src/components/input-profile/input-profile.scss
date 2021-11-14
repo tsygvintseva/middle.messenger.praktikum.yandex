@@ -1,0 +1,38 @@
+@import "../../scss/variables";
+
+.input-profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 13px;
+  line-height: 13px;
+  border-bottom: 1px solid $light-gray;
+
+  & span {
+    margin-right: 20px;
+  }
+
+  &:first-of-type {
+    padding-top: 0;
+  }
+
+  &:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  & input {
+    flex-grow: 1;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: end;
+    color: $secondary-text-color;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

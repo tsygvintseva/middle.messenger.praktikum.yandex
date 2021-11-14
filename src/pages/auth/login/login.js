@@ -24,6 +24,7 @@ const data = {
     },
   ],
   buttonText: "Войти",
+  buttonType: "submit",
   linkHref: "/#registration",
   linkText: "Нет аккаунта?",
 };

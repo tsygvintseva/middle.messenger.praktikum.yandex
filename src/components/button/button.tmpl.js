@@ -1,5 +1,5 @@
 export default `
-  <button class="button">
-    {{ buttonText }}
+  <button class="button" type="{{buttonType}}">
+    {{buttonText}}
   </button>
 `;
