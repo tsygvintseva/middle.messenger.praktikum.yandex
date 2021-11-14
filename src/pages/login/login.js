@@ -19,12 +19,12 @@ const data = {
     {
       label: "Пароль",
       type: "password",
-      ame: "password",
+      name: "password",
       validationError: "Неверный пароль",
     },
   ],
   buttonText: "Войти",
-  linkHref: "/registration",
+  linkHref: "/#registration",
   linkText: "Нет аккаунта?",
 };
 
