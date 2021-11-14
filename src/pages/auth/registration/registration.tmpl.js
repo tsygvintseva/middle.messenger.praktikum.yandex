@@ -1,7 +1,7 @@
 export default `
   <div class="container">
-    <section class="modal registration">
-      <h1 class="registration__title">{{ title }}</h1>
+    <section class="modal auth">
+      <h1 class="auth__title">{{ title }}</h1>
       <form action="" method="post" class="form">
       
         <div class="form__content">

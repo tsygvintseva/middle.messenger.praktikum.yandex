@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+  color: $primary-text-color;
 
   & main {
     display: flex;
@@ -23,6 +24,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
@@ -34,7 +36,6 @@ h1 {
   font-size: 20px;
   line-height: 20px;
   text-align: center;
-  color: $primary-text-color;
 }
 
 .main-nav {

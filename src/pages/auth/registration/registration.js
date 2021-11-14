@@ -1,9 +1,9 @@
 import Handlebars from "handlebars";
 import registrationTemplate from "./registration.tmpl";
-import "./registration.scss";
-import "../../components/input/input";
-import "../../components/button/button";
-import "../../components/link/link";
+import "../auth.scss";
+import "../../../components/input/input";
+import "../../../components/button/button";
+import "../../../components/link/link";
 
 const registration = Handlebars.compile(registrationTemplate);
 

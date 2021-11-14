@@ -1,9 +1,9 @@
 import Handlebars from "handlebars";
 import loginTemplate from "./login.tmpl";
-import "./login.scss";
-import "../../components/input/input";
-import "../../components/button/button";
-import "../../components/link/link";
+import "../auth.scss";
+import "../../../components/input/input";
+import "../../../components/button/button";
+import "../../../components/link/link";
 
 const login = Handlebars.compile(loginTemplate);
 
