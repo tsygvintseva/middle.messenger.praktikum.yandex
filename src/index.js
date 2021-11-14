@@ -28,5 +28,3 @@ window.addEventListener("hashchange", () => {
       return (view.innerHTML = startPage.innerHTML);
   }
 });
-
-view.innerHTML = profileUpdatePassword;
