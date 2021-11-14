@@ -1,4 +1,31 @@
-import { sum } from "../../modules/sum";
+import Handlebars from "handlebars";
+import loginTemplate from "./login.tmpl";
+import "./login.scss";
+import "../../components/input/input";
+import "../../components/button/button";
+import "../../components/link/link";
 
-const root = document.querySelector("#root");
-root.textContent = sum(6, -1).toString();
+const login = Handlebars.compile(loginTemplate);
+
+const data = {
+  title: "Вход",
+  input: [
+    {
+      label: "Логин",
+      type: "text",
+      name: "login",
+      validationError: "Неверный логин",
+    },
+    {
+      label: "Пароль",
+      type: "password",
+      ame: "password",
+      validationError: "Неверный пароль",
+    },
+  ],
+  buttonText: "Войти",
+  linkHref: "/registration",
+  linkText: "Нет аккаунта?",
+};
+
+export default login(data);

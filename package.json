@@ -1,18 +1,19 @@
 {
-  "name": "test",
+  "name": "messenger",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel static/login.html -p 3000",
-    "build": "parcel build static/login.html"
+    "start": "parcel static/index.html -p 3000",
+    "build": "parcel build static/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
-    "prettier": "2.4.1"
+    "prettier": "2.4.1",
+    "sass": "^1.43.4"
   },
   "dependencies": {
     "handlebars": "^4.7.7"

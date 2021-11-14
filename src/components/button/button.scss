@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+
+.button {
+  display: block;
+  padding: 12px 30px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 13px;
+  color: $white;
+  background: $primary-blue;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
