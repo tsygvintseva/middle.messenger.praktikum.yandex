@@ -4,13 +4,15 @@
   "description": "### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.  ### ВАЖНО: pull request должен называться “Sprint i” (i — номер спринта).",
   "main": "index.js",
   "scripts": {
-    "start": "parcel static/index.html -p 3000",
+    "start": "node server.js",
+    "dev": "parcel static/index.html",
     "build": "parcel build static/index.html"
   },
   "keywords": [],
   "author": "tsygvintseva",
   "license": "ISC",
   "devDependencies": {
+    "express": "^4.17.1",
     "parcel-bundler": "^1.12.5",
     "prettier": "2.4.1",
     "sass": "^1.43.4"
@@ -25,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/tsygvintseva/middle.messenger.praktikum.yandex/issues"
   },
-  "homepage": "https://github.com/tsygvintseva/middle.messenger.praktikum.yandex#readme"
+  "homepage": "https://github.com/tsygvintseva/middle.messenger.praktikum.yandex#readme",
+  "engines": {
+    "node": ">=12.x"
+  }
 }

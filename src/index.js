@@ -3,6 +3,7 @@ import login from "./pages/auth/login/login";
 import registration from "./pages/auth/registration/registration";
 import profile from "./pages/profile/profile";
 import profileUpdatePassword from "./pages/profile/profile-update-password/profile-update-password";
+import chats from "./pages/chats/chats";
 import error404 from "./pages/error/error-404/error-404";
 import error500 from "./pages/error/error-500/error-500";
 
@@ -20,6 +21,8 @@ window.addEventListener("hashchange", () => {
       return (view.innerHTML = profile);
     case "#profile-update-password":
       return (view.innerHTML = profileUpdatePassword);
+    case "#chats":
+      return (view.innerHTML = chats);
     case "#error404":
       return (view.innerHTML = error404);
     case "#error500":
