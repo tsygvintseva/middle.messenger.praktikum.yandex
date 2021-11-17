@@ -61,7 +61,6 @@ const data = {
     },
   ],
   profileNotChange: true,
-  linkHref: "",
   linkText: "Изменить пароль",
   buttonText: "Сохранить",
 };
