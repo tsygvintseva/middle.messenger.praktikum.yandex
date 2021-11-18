@@ -4,8 +4,8 @@
   "description": "### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.  ### ВАЖНО: pull request должен называться “Sprint i” (i — номер спринта).",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "parcel static/index.html --port 3000 --open",
+    "start": "parcel static/index.html --port 3000 --open",
+    "server": "node server.js",
     "build": "parcel build static/index.html"
   },
   "keywords": [],
