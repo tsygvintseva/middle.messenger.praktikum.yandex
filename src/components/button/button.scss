@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 30px;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 500;
+  color: $white;
+  background: $primary-blue;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+@import "../../scss/variables";
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.field__label {
+  position: absolute;
+  bottom: 7px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 13px;
+  color: $secondary-text-color;
+}
+
+.field__input {
+  padding: 12px 0 7px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 13px;
+  color: $primary-text-color;
+  border: none;
+  border-bottom: 1px solid $primary-blue;
+
+  &:focus,
+  &:valid {
+    outline: none;
+
+    & + .field__label {
+      top: 0;
+      font-size: 9px;
+      line-height: 9px;
+    }
+  }
+
+  &:focus + .field__label {
+    top: 0;
+    font-size: 9px;
+    line-height: 9px;
+  }
+}
+
+.field__error {
+  position: absolute;
+  top: 100%;
+  display: none;
+  margin-top: 7px;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 8px;
+  color: $alert;
+}

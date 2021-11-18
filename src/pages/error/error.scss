@@ -1,0 +1,17 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.error__code {
+  margin: 0 0 20px;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.error__desc {
+  margin: 0 0 69px;
+}
