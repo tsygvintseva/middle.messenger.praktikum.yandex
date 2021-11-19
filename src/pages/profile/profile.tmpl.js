@@ -5,7 +5,7 @@ export default `
     </div>
     <section class="profile__content">
     
-      <form action="" method="post">
+      <form>
         {{> avatar}}
                 
         {{#if profileNotChange}}

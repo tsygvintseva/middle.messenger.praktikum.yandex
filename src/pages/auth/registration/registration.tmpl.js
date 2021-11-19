@@ -1,5 +1,5 @@
 export default `
-  <section class="modal auth">
+  <section class="card auth">
     <h1 class="auth__title">{{title}}</h1>
     <form action="" method="post" class="auth__form">
     
