@@ -1,0 +1,115 @@
+@import "../../scss/variables";
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  padding: 11px;
+  width: fit-content;
+  font-size: 12px;
+  line-height: 15px;
+
+  & p {
+    margin: 0;
+  }
+
+  &--incoming {
+    background: $message-incoming;
+    border-radius: 0 12px 12px 12px;
+
+    & .message__info {
+      color: $message;
+    }
+  }
+
+  &--outgoing {
+    background: $selected;
+    border-radius: 12px 12px 0 12px;
+
+    & .message__info {
+      display: flex;
+      align-items: center;
+      color: $primary-blue;
+
+      &::before {
+        content: "";
+        display: block;
+        margin-right: 4px;
+        height: 6px;
+        background-repeat: no-repeat;
+      }
+
+      &--read {
+        &::before {
+          width: 10px;
+          background-image: url("/img/icon-read.svg");
+        }
+      }
+
+      &--delivered {
+        &::before {
+          width: 7px;
+          background-image: url("/img/icon-delivered.svg");
+        }
+      }
+    }
+
+    &--img {
+      border: 1px solid $selected;
+    }
+  }
+
+  &--img {
+    position: relative;
+    padding: 0;
+
+    & img {
+      width: 316px;
+      height: 211px;
+      object-fit: cover;
+    }
+
+    & .message__info {
+      position: absolute;
+      right: 11px;
+      bottom: 11px;
+      display: block;
+      padding: 2px 7px;
+      color: $white;
+      border-radius: 30px;
+    }
+
+    &.message--incoming {
+      background: $white;
+      border: 1px solid $message-incoming;
+
+      & img {
+        border-radius: 0 12px 12px 12px;
+      }
+
+      & .message__info {
+        background: rgba(82, 82, 82, 0.5);
+      }
+    }
+
+    &.message--outgoing {
+      background: $white;
+      border: 1px solid $selected;
+
+      & img {
+        border-radius: 12px 12px 0 12px;
+      }
+
+      & .message__info {
+        background: rgba($selected, 0.5);
+      }
+    }
+  }
+}
+
+.message__info {
+  align-self: flex-end;
+  margin-top: 2px;
+  font-size: 9px;
+  line-height: 9px;
+}

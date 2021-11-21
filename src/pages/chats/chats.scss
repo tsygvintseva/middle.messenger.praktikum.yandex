@@ -7,7 +7,6 @@
 }
 
 .chats__dialogue-wrap {
-  padding: 0 10px;
   background: $gray;
   border-right: 1px solid $light-gray;
   overflow-y: auto;
@@ -23,9 +22,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 20px;
-  padding-bottom: 14px;
+  width: calc(100% - 20px);
+  padding: 20px 10px 14px;
   background: $gray;
+  z-index: 3;
 }
 
 .chats__link {
@@ -48,4 +48,125 @@
     width: 6px;
     background-image: url("/img/icon-arrow-gray.svg");
   }
+}
+
+.chats__window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chats__empty {
+  font-size: 12px;
+  line-height: 12px;
+  color: $message;
+}
+
+.chats__wrap {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 350px);
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.chats__header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid $light-gray;
+}
+
+.chats__header-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.chats__avatar {
+  margin-right: 10px;
+  width: 34px;
+  height: 34px;
+  background: $gray-background;
+  border-radius: 50%;
+}
+
+.chats__name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+.chats__utils-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url("/img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  &.active,
+  &:hover {
+    background-color: $hover;
+    background-image: url("/img/icon-menu-active.svg");
+  }
+}
+
+.chats__utils-modal {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: $white;
+  border-radius: 12px;
+}
+
+.chats__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.chats__footer {
+  position: relative;
+  padding: 11px 0;
+  border-top: 1px solid $light-gray;
+}
+
+.chats__attach-file-modal {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+  background: $white;
+  border-radius: 12px;
+}
+
+.chats__incoming,
+.chats__outgoing {
+  margin: 15px 0;
+  max-width: 41%;
+}
+
+.chats__outgoing {
+  align-self: flex-end;
+}
+
+.chats__date {
+  display: block;
+  margin: 15px 0;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: $message;
 }
