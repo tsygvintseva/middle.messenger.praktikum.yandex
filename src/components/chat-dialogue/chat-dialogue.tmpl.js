@@ -3,20 +3,41 @@ export default `
     <div class="chat-dialogue__preview">
         <img src="" alt="">
         <div>
-            <p class="chat-dialogue__author">Андрей</p>
+            <p class="chat-dialogue__author">{{chatName}}</p>
             <div class="chat-dialogue__message">
-                <p>
-                    Друзья, у меня для вас особенный выпуск новостей!...
-                </p>
-                <p>Изображение</p>
-                <p>Стикер</p>
-                <p>Вы: стикер</p>
+            
+              <p>
+                {{#if chatYourMessage}}
+                <span class="chat-dialogue__you">
+                Вы: 
+                </span>
+                {{/if}}
+                
+                {{#if chatMessage}}
+                <span>
+                    {{chatMessageText}}
+                </span>
+                {{/if}}
+                
+                {{#if chatImg}}
+                <span>Изображение</span>
+                {{/if}}
+                
+                {{#if chatSticker}}
+                <span>Стикер</span>
+                {{/if}}
+                
             </div>
         </div>
       </div>
       <div class="chat-dialogue__info">
           <span class="chat-dialogue__time">15:12</span>
-          <span class="chat-dialogue__count">4</span>
+          
+          {{#if chatUnread}}
+          <span class="chat-dialogue__count">
+            {{chatUnreadCount}}
+          </span>
+          {{/if}}
       </div>
   </div>
-`
+`;

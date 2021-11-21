@@ -1,0 +1,51 @@
+@import "../../scss/variables";
+
+.chats {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  height: 100vh;
+}
+
+.chats__dialogue-wrap {
+  padding: 0 10px;
+  background: $gray;
+  border-right: 1px solid $light-gray;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.chats__search-wrap {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 20px;
+  padding-bottom: 14px;
+  background: $gray;
+}
+
+.chats__link {
+  position: relative;
+  margin-bottom: 23px;
+  padding-right: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  color: $message;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    height: 9px;
+    width: 6px;
+    background-image: url("/img/icon-arrow-gray.svg");
+  }
+}

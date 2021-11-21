@@ -9,12 +9,7 @@ import "../../components/button/button";
 const profile = Handlebars.compile(profileTemplate);
 
 const data = {
-  avatar: false,
-  avatarModal: false,
   avatarFileName: "pic.jpg",
-  avatarUpload: false,
-  avatarUploadError: false,
-  avatarValidationError: false,
   name: "Иван",
   inputProfile: [
     {

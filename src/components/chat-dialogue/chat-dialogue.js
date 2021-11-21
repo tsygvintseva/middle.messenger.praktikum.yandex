@@ -4,7 +4,6 @@ import "./chat-dialogue.scss";
 
 const chatDialogue = Handlebars.compile(chatDialogueTemplate);
 
-Handlebars.registerPartial("avatar", chatDialogue);
+Handlebars.registerPartial("chatDialogue", chatDialogue);
 
 export default chatDialogue;
-
