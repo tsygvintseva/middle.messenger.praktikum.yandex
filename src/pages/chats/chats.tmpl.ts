@@ -28,8 +28,11 @@ export default `
           <button class="chats__utils-btn" aria-label="Настройки чата"></button>
           
           {{#if chatsUtilsModal}}
-          <div class="chats__utils-modal">
-            {{> chatUtils}}
+          <div class="chat-utils">
+              <div class="chat-utils__content">
+                <button class="chat-utils__btn chat-utils__btn--add">Добавить пользователя</button>
+                <button class="chat-utils__btn chat-utils__btn--delete">Удалить пользователя</button>
+              </div>
           </div>
           {{/if}}
           
@@ -53,12 +56,6 @@ export default `
         
         <div class="chats__footer">
           {{> messageForm}}
-          
-          {{#if chatsAttachFile}}
-          <div class="chats__attach-file-modal">
-          {{> chatAttachFile}}
-          </div>
-          {{/if}}
         </div>
         
       </section>

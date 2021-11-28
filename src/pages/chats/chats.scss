@@ -117,15 +117,6 @@
   }
 }
 
-.chats__utils-modal {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 10px;
-  background: $white;
-  border-radius: 12px;
-}
-
 .chats__content {
   display: flex;
   flex-direction: column;
@@ -141,15 +132,6 @@
   position: relative;
   padding: 11px 0;
   border-top: 1px solid $light-gray;
-}
-
-.chats__attach-file-modal {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  margin-bottom: 10px;
-  background: $white;
-  border-radius: 12px;
 }
 
 .chats__incoming,
