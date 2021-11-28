@@ -1,7 +1,7 @@
 {
   "name": "messenger",
   "version": "1.0.0",
-  "description": "Веб-сервис \"Мессенджер\" предназначен для мгновенного обмена сообщениями и файлами.",
+  "description": "Веб-сервис \"Мессенджер\".",
   "main": "index.js",
   "scripts": {
     "start": "parcel static/index.html --port 3000 --open",
@@ -12,6 +12,8 @@
   "author": "tsygvintseva",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb": "^19.0.1",
     "express": "^4.17.1",
     "parcel-bundler": "^1.12.5",
     "prettier": "2.4.1",

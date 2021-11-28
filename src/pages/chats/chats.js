@@ -1,126 +1,126 @@
-import Handlebars from "handlebars";
-import chatsTemplate from "./chats.tmpl";
-import "./chats.scss";
-import "../../components/search/search";
-import "../../components/chat-dialogue/chat-dialogue";
-import "../../components/chat-utils/chat-utils";
-import "../../components/chat-attach-file/chat-attach-file";
-import "../../components/message-incoming/message-incoming";
-import "../../components/message-outgoing/message-outgoing";
-import "../../components/message-form/message-form";
+import Handlebars from 'handlebars';
+import chatsTemplate from './chats.tmpl';
+import './chats.scss';
+import '../../components/search/search';
+import '../../components/chat-dialogue/chat-dialogue';
+import '../../components/chat-utils/chat-utils';
+import '../../components/chat-attach-file/chat-attach-file';
+import '../../components/message-incoming/message-incoming';
+import '../../components/message-outgoing/message-outgoing';
+import '../../components/message-form/message-form';
 
 const chats = Handlebars.compile(chatsTemplate);
 
 const data = {
   chatDialogue: [
     {
-      chatName: "Андрей",
+      chatName: 'Андрей',
       chatImg: true,
       chatUnread: true,
       chatUnreadCount: 2,
     },
     {
-      chatName: "Киноклуб",
+      chatName: 'Киноклуб',
       chatYourMessage: true,
       chatSticker: true,
     },
     {
-      chatName: "Илья",
+      chatName: 'Илья',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
       chatUnread: true,
       chatUnreadCount: 4,
     },
     {
-      chatName: "Вадим",
+      chatName: 'Вадим',
       chatMessage: true,
-      chatMessageText: "Круто!",
+      chatMessageText: 'Круто!',
     },
     {
-      chatName: "тет-а-теты",
+      chatName: 'тет-а-теты',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "1, 2, 3",
+      chatName: '1, 2, 3',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "Design Destroyer",
+      chatName: 'Design Destroyer',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "Day.",
+      chatName: 'Day.',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "тет-а-теты",
+      chatName: 'тет-а-теты',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "1, 2, 3",
+      chatName: '1, 2, 3',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "Design Destroyer",
+      chatName: 'Design Destroyer',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
-      chatName: "Day.",
+      chatName: 'Day.',
       chatMessage: true,
       chatMessageText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
   ],
-  chatName: "Вадим",
+  chatName: 'Вадим',
   chatsUtilsModal: true,
   chatsAttachFile: true,
-  chatsDate: "19 июня",
+  chatsDate: '19 июня',
   messageIncoming: [
     {
       isMessageText: true,
       messageText:
-        "Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n" +
-        "\n" +
-        "Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.",
-      messageTime: "11:56",
+        'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n'
+        + '\n'
+        + 'Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.',
+      messageTime: '11:56',
     },
     {
       isMessageImg: true,
-      messageTime: "11:56",
+      messageTime: '11:56',
     },
     {
       isMessageText: true,
       messageText:
-        "Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n" +
-        "\n" +
-        "Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.",
-      messageTime: "11:56",
+        'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n'
+        + '\n'
+        + 'Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро.',
+      messageTime: '11:56',
     },
     {
       isMessageImg: true,
-      messageTime: "11:56",
+      messageTime: '11:56',
     },
   ],
   messageOutgoing: [
     {
       isMessageText: true,
-      messageText: "Круто!",
-      messageTime: "12:00",
+      messageText: 'Круто!',
+      messageTime: '12:00',
       isMessageRead: true,
     },
   ],
