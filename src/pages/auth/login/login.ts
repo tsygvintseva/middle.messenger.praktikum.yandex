@@ -49,7 +49,6 @@ export class Login extends Block {
   public render() {
     const template = Handlebars.compile(loginTmpl);
 
-    console.log(this.props)
     return template(this.props);
   }
 

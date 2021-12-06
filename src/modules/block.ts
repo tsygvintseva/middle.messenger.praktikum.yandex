@@ -93,6 +93,8 @@ export default class Block {
       return;
     }
 
+    console.log(nextProps)
+
     Object.assign(this.props, nextProps);
   };
 

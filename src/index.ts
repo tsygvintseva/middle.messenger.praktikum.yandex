@@ -9,13 +9,13 @@ import { render } from './utils/renderDOM';
 // import error404 from './pages/error/error-404/error-404';
 // import error500 from './pages/error/error-500/error-500';
 
-const output = document.querySelector('#output') as HTMLElement;
+const output: string = '#output';
 
 window.addEventListener('hashchange', () => {
   const currentURL = location.hash;
   switch (currentURL) {
     case '#login':
-      render(output, new Login().getContent())
+      render(output, new Login())
       break
     // case '#registration':
     //   return (view.innerHTML = registration);
@@ -30,7 +30,7 @@ window.addEventListener('hashchange', () => {
     // case '#error500':
     //   return (view.innerHTML = error500);
     default:
-      render(output, new Login().getContent())
+      render(output, new Login())
       break
   }
 });

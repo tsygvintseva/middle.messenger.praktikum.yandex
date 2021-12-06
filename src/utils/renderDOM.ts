@@ -3,7 +3,5 @@ export function render(query, block) {
 
   root.appendChild(block.getContent());
 
-  block.dispatchComponentDidMount();
-
   return root;
 }
