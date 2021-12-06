@@ -4,14 +4,14 @@ export default `
     <form action="" method="post" class="auth__form">
     
       <div class="auth__form-content">
-        {{#each input}}
-          {{> input}}
-        {{/each}} 
+<!--        {{#each input}}-->
+<!--          {{> input}}-->
+<!--        {{/each}} -->
       </div>
 
       <div class="auth__form-btns">
-        {{> button}}
-        {{> link}}
+        {{{ button }}}
+        <a href="/#registration" class='link'>Нет аккаунта?</a>
       </div>
       
     </form>

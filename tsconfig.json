@@ -6,10 +6,14 @@
     "declaration": false,
     "module": "commonjs",
 
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "sourceMap": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ]
   }
 }
