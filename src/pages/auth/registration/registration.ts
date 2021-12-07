@@ -1,9 +1,8 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import registrationTemplate from './registration.tmpl';
 import '../auth.scss';
 import '../../../components/input/input';
 import '../../../components/button/button';
-import '../../../components/link/link';
 
 const registration = Handlebars.compile(registrationTemplate);
 
@@ -62,8 +61,6 @@ const data = {
   ],
   buttonText: 'Зарегистрироваться',
   buttonType: 'submit',
-  linkHref: '/#login',
-  linkText: 'Войти',
 };
 
 export default registration(data);

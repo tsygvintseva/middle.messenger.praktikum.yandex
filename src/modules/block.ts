@@ -1,6 +1,4 @@
-import * as Handlebars from 'handlebars';
 import EventBus from './event-bus';
-import {v4 as makeUUID} from 'uuid';
 
 export default class Block {
   static EVENTS = {
@@ -9,8 +7,6 @@ export default class Block {
     FLOW_CDU: 'flow:component-did-update',
     FLOW_RENDER: 'flow:render',
   };
-
-  uuid = makeUUID();
 
   eventBus: () => EventBus;
   props: { [key: string]: any };
@@ -49,7 +45,7 @@ export default class Block {
   }
 
   _createResources() {
-    const { tagName } = this._meta;
+    const {tagName} = this._meta;
     this._element = this._createDocumentElement(tagName);
   }
 
@@ -71,7 +67,7 @@ export default class Block {
 
   _componentDidUpdate(
     oldProps: { [key: string]: any },
-    newProps: { [key: string]: any }
+    newProps: { [key: string]: any },
   ) {
     const response = this.componentDidUpdate(oldProps, newProps);
     if (!response) {
@@ -83,7 +79,7 @@ export default class Block {
 
   componentDidUpdate(
     oldProps: { [key: string]: any },
-    newProps: { [key: string]: any }
+    newProps: { [key: string]: any },
   ) {
     return oldProps !== newProps;
   }
@@ -92,8 +88,6 @@ export default class Block {
     if (!nextProps) {
       return;
     }
-
-    console.log(nextProps)
 
     Object.assign(this.props, nextProps);
   };
@@ -136,15 +130,11 @@ export default class Block {
         }
 
         target[prop] = value;
-        self.eventBus().emit(Block.EVENTS.FLOW_CDU, { ...target }, target);
+        self.eventBus().emit(Block.EVENTS.FLOW_CDU, {...target}, target);
         return true;
       },
-      deleteProperty(target: { [key: string]: any }, prop: string) {
-        if (prop.indexOf('_') === 0) {
-          throw new Error('Нет прав');
-        }
-        delete target[prop];
-        return true;
+      deleteProperty() {
+        throw new Error('Нет прав');
       },
     });
   }

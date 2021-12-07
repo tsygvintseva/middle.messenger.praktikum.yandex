@@ -1,12 +1,11 @@
 import * as Handlebars from 'handlebars';
+
 import loginTmpl from './login.tmpl';
-// import '../auth.scss';
-// import '../../../components/input/input';
-// import '../../../components/button/button';
-// import '../../../components/link/link';
-import { Button } from '../../../components/button/button';
 import Block from '../../../modules/block';
-import { compile } from 'handlebars';
+import { Button } from '../../../components/button/button';
+// import '../../../components/input/input';
+
+import '../auth.scss';
 
 const BUTTON = {
     buttonText: 'Войти',
@@ -15,46 +14,23 @@ const BUTTON = {
 
 const DATA = {
   title: 'Вход',
-  button: new Button({
-    buttonText: 'Войти',
-    buttonType: 'submit'
-  })
+  button: new Button(BUTTON)
 }
 
 export class Login extends Block {
-  // constructor() {
-  //   super('div', {
-  //     loginInput: new Button({
-  //       buttonText: 'Войти',
-  //       buttonType: 'submit',
-  //     }),
-  //   });
-  // }
-  //
-  // render() {
-  //   const template = Handlebars.compile(loginTmpl);
-  //   return template({
-  //     button: this.props.button,
-  //   });
-  // }
-
   constructor(props?: any) {
-    super(props);
+    super('div', props);
   }
 
   componentDidMount() {
     this.setProps(DATA);
   }
 
-  public render() {
+  render() {
     const template = Handlebars.compile(loginTmpl);
 
     return template(this.props);
   }
-
-  // public render() {
-  //   return this.compile(loginTmpl, this.props);
-  // }
 }
 
 // const login = Handlebars.compile(loginTemplate);

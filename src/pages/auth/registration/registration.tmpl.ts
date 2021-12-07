@@ -11,7 +11,7 @@ export default `
 
       <div class="auth__form-btns">
         {{> button}}
-        {{> link}}
+        <a href='/#login' class="link">Войти</a>
       </div>
       
     </form>

@@ -1,4 +1,4 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import chatsTemplate from './chats.tmpl';
 import './chats.scss';
 import '../../components/search/search';

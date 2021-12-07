@@ -1,4 +1,4 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import profileUpdatePasswordTemplate from './profile-update-password.tmpl';
 import '../profile.scss';
 import '../../../components/avatar/avatar';

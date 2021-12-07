@@ -26,6 +26,7 @@ export default `
         </li>
         <li>
           {{> link}} 
+           <a href="" class="link">Изменить пароль</a>
         </li>   
         <li>
           <button class="link link--alert">Выйти</button>

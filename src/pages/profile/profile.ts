@@ -1,9 +1,8 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import profileTemplate from './profile.tmpl';
 import './profile.scss';
 import '../../components/avatar/avatar';
 import '../../components/input-profile/input-profile';
-import '../../components/link/link';
 import '../../components/button/button';
 
 const profile = Handlebars.compile(profileTemplate);
@@ -56,7 +55,6 @@ const data = {
     },
   ],
   profileNotChange: true,
-  linkText: 'Изменить пароль',
   buttonText: 'Сохранить',
 };
 

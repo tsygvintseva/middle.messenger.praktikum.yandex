@@ -10,8 +10,8 @@ export default `
       </div>
 
       <div class="auth__form-btns">
-        {{> button }}
-        <a href="/#registration" class='link'>Нет аккаунта?</a>
+        {{{ button }}}
+        <a href="/#registration" class="link">Нет аккаунта?</a>
       </div>
       
     </form>
