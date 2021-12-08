@@ -1,4 +1,5 @@
 import EventBus from './event-bus';
+import { v4 as makeUUID } from 'uuid';
 
 export default class Block {
   static EVENTS = {
@@ -12,6 +13,7 @@ export default class Block {
   props: { [key: string]: any };
   _meta: { tagName: string; props: { [key: string]: any } };
   _element: HTMLElement;
+  _id = '';
 
   constructor(tagName: string = 'div', props: {} = {}) {
     const eventBus = new EventBus();
@@ -20,7 +22,9 @@ export default class Block {
       props,
     };
 
-    this.props = this._makePropsProxy(props);
+    this._id = makeUUID();
+
+    this.props = this._makePropsProxy({ ...props, __id: this._id });
 
     this.eventBus = () => eventBus;
 
@@ -41,7 +45,9 @@ export default class Block {
   }
 
   _createDocumentElement(tagName: string) {
-    return document.createElement(tagName);
+    const element = document.createElement(tagName);
+    element.setAttribute('data-id', this._id);
+    return element;
   }
 
   init() {
