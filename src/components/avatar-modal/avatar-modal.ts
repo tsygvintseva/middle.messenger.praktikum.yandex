@@ -1,4 +1,4 @@
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import avatarModalTemplate from './avatar-modal.tmpl';
 import './avatar-modal.scss';
 

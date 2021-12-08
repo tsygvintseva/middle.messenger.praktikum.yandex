@@ -13,15 +13,6 @@ export default class Block {
   _meta: { tagName: string; props: { [key: string]: any } };
   _element: HTMLElement;
 
-  // _element = null;
-
-  /** JSDoc
-   * @param {string} tagName
-   * @param {Object} props
-   *
-   * @returns {void}
-   */
-
   constructor(tagName: string = 'div', props: {} = {}) {
     const eventBus = new EventBus();
     this._meta = {
@@ -100,7 +91,6 @@ export default class Block {
     const block: string = this.render();
     this._removeEvents();
     this._element.innerHTML = block;
-    // His._element.addEventListener("click", e => console.log(e))
     this._addEvents();
   }
 
