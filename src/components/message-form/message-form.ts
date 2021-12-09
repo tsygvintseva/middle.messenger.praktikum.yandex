@@ -1,9 +1,15 @@
-import Handlebars from 'handlebars';
-import messageFormTemplate from './message-form.tmpl';
+import Block from '../../modules/block';
+import messageFormTmpl from './message-form.tmpl';
 import './message-form.scss';
 
-const messageForm = Handlebars.compile(messageFormTemplate);
 
-Handlebars.registerPartial('messageForm', messageForm);
+export class MessageForm extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
 
-export default messageForm;
+  render(): Element {
+    // @ts-ignore
+    return this.compile(messageFormTmpl, this.props);
+  }
+}

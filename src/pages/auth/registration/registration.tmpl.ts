@@ -1,16 +1,20 @@
 export default `
   <section class="card auth">
     <h1 class="auth__title">{{title}}</h1>
-    <form action="" method="post" class="auth__form">
+    <form method="post" class="auth__form">
     
       <div class="auth__form-content">
-        {{#each input}}
-          {{> input}}
-        {{/each}} 
+        {{{email}}}
+        {{{login}}}
+        {{{firstName}}}
+        {{{lastName}}}  
+        {{{phone}}}
+        {{{password}}}
+        {{{passwordRepeat}}}
       </div>
 
       <div class="auth__form-btns">
-        {{> button}}
+        {{{button}}}
         <a href='/#login' class="link">Войти</a>
       </div>
       

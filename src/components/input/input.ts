@@ -1,9 +1,14 @@
-import Handlebars from 'handlebars';
-import inputTemplate from './input.tmpl';
+import Block from '../../modules/block';
+import inputTmpl from './input.tmpl';
 import './input.scss';
 
-const input = Handlebars.compile(inputTemplate);
+export class Input extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
 
-Handlebars.registerPartial('input', input);
-
-export default input;
+  render(): Element {
+    // @ts-ignore
+    return this.compile(inputTmpl, this.props);
+  }
+}

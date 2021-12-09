@@ -3,7 +3,8 @@
 .message {
   display: flex;
   flex-direction: column;
-  margin: 5px 0;
+  margin: 10px 0;
+  max-width: 41%;
   padding: 11px;
   width: fit-content;
   font-size: 12px;
@@ -23,6 +24,7 @@
   }
 
   &--outgoing {
+    float: right;
     background: $selected;
     border-radius: 12px 12px 0 12px;
 

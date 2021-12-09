@@ -6,16 +6,16 @@ export default `
     <section class="profile__content">
     
       <form>
-        {{> avatar}}
+        {{{avatar}}}
         
         <div class="profile__wrapper profile__wrapper--password">
-          {{#each inputProfile}}
-            {{> inputProfile}}
-          {{/each}} 
+          {{{oldPassword}}}
+          {{{newPassword}}}
+          {{{confirmPassword}}}
         </div>
       </form>
       
-      {{> button}}
+      {{{button}}}
       
     </section>
   </div>

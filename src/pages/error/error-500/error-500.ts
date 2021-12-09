@@ -1,12 +1,23 @@
-import * as Handlebars from 'handlebars';
-import errorTemplate from './error-500.tmpl';
+import Block from '../../../modules/block';
+import errorTmpl from './error-500.tmpl';
 import '../error.scss';
 
-const error500 = Handlebars.compile(errorTemplate);
-
-const data = {
+const ERROR_DATA = {
   errorCode: '500',
   errorDesc: 'Мы уже фиксим',
-};
+}
 
-export default error500(data);
+export class Error500 extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
+
+  componentDidMount(): void {
+    this.setProps(ERROR_DATA);
+  }
+
+  render(): Element {
+    // @ts-ignore
+    return this.compile(errorTmpl, this.props);
+  }
+}

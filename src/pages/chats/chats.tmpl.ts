@@ -4,11 +4,13 @@ export default `
     <div class="chats__dialogue-wrap">
       <div class="chats__search-wrap">
         <a href="/#profile" class="chats__link">Профиль</a>
-        {{> search}}
+        <div class="chats__search">
+          <input class="chats__search-input" type="search">
+        </div>
       </div>
     
-      {{#each chatDialogue}}
-        {{> chatDialogue}}
+      {{#each chat}}
+        {{> chat}}
       {{/each}} 
       
     </div>
@@ -41,21 +43,16 @@ export default `
         <div class="chats__content">
           <span class="chats__date">{{chatsDate}}</span>
           
-          <div class="chats__incoming">
-            {{#each messageIncoming}}
-              {{> messageIncoming}}
+          <div class="chats__message">
+            {{#each message}}
+              {{> message}}
             {{/each}} 
           </div>
           
-          <div class="chats__outgoing">
-            {{#each messageOutgoing}}
-              {{> messageOutgoing}}
-            {{/each}} 
-          </div>
         </div>
         
         <div class="chats__footer">
-          {{> messageForm}}
+          {{{messageForm}}}
         </div>
         
       </section>

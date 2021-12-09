@@ -1,22 +1,18 @@
 export default `
-    <div class="chat-dialogue">
-    <div class="chat-dialogue__preview">
+    <div class="chat">
+    <div class="chat__preview">
       <img src="" alt="">
       <div>
-          <p class="chat-dialogue__author">{{chatName}}</p>
-          <div class="chat-dialogue__message">
+          <p class="chat__author">{{chatName}}</p>
+          <div class="chat__message">
           
             <p>
               {{#if chatYourMessage}}
-              <span class="chat-dialogue__you">
-              Вы: 
-              </span>
+              <span class="chat__you">Вы: </span>
               {{/if}}
               
               {{#if chatMessage}}
-              <span>
-                  {{chatMessageText}}
-              </span>
+              <span>{{chatMessageText}}</span>
               {{/if}}
               
               {{#if chatImg}}
@@ -30,14 +26,13 @@ export default `
           </div>
       </div>
       </div>
-    <div class="chat-dialogue__info">
-        <span class="chat-dialogue__time">15:12</span>
+    <div class="chat__info">
+        <span class="chat__time">15:12</span>
         
         {{#if chatUnread}}
-        <span class="chat-dialogue__count">
-          {{chatUnreadCount}}
-        </span>
+        <span class="chat__count">{{chatUnreadCount}}</span>
         {{/if}}
+        
       </div>
   </div>
 `;

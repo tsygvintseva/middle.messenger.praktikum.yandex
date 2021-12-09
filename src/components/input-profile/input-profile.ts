@@ -1,9 +1,14 @@
-import Handlebars from 'handlebars';
-import inputProfileTemplate from './input-profile.tmpl';
+import Block from '../../modules/block';
+import inputProfileTmpl from './input-profile.tmpl';
 import './input-profile.scss';
 
-const inputProfile = Handlebars.compile(inputProfileTemplate);
+export class InputProfile extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
 
-Handlebars.registerPartial('inputProfile', inputProfile);
-
-export default inputProfile;
+  render(): Element {
+    // @ts-ignore
+    return this.compile(inputProfileTmpl, this.props);
+  }
+}

@@ -1,60 +1,48 @@
-import * as Handlebars from 'handlebars';
-
-import loginTmpl from './login.tmpl';
 import Block from '../../../modules/block';
+import loginTmpl from './login.tmpl';
+import { Input } from '../../../components/input/input';
 import { Button } from '../../../components/button/button';
-// import '../../../components/input/input';
-
 import '../auth.scss';
 
-const BUTTON = {
-    buttonText: 'Войти',
-    buttonType: 'submit'
+const LOGIN = {
+  label: 'Логин',
+  type: 'text',
+  name: 'login',
+  required: true,
+  validationError: 'Неверный логин',
 }
 
-const DATA = {
+const PASSWORD = {
+  label: 'Пароль',
+  type: 'password',
+  name: 'password',
+  required: true,
+  validationError: 'Неверный пароль',
+}
+
+const BUTTON = {
+  buttonText: 'Войти',
+  buttonType: 'submit'
+}
+
+const FORM_DATA = {
   title: 'Вход',
+  login: new Input(LOGIN),
+  password: new Input(PASSWORD),
   button: new Button(BUTTON)
 }
 
 export class Login extends Block {
   constructor(props?: any) {
-    super('div', props);
+    super(props);
   }
 
-  componentDidMount() {
-    this.setProps(DATA);
+  componentDidMount(): void {
+    this.setProps(FORM_DATA);
   }
 
-  render() {
-    const template = Handlebars.compile(loginTmpl);
-
-    return template(this.props);
+  render(): Element {
+    // @ts-ignore
+    return this.compile(loginTmpl, this.props);
   }
 }
-
-// const login = Handlebars.compile(loginTemplate);
-//
-// const data = {
-//   title: 'Вход',
-//   input: [
-//     {
-//       label: 'Логин',
-//       type: 'text',
-//       name: 'login',
-//       required: true,
-//       validationError: 'Неверный логин',
-//     },
-//     {
-//       label: 'Пароль',
-//       type: 'password',
-//       name: 'password',
-//       required: true,
-//       validationError: 'Неверный пароль',
-//     },
-//   ],
-//   buttonText: 'Войти',
-//   buttonType: 'submit',
-// };
-//
-// export default login(data);

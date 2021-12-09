@@ -1,5 +1,5 @@
 export default `
-  <div class="message message--incoming {{#if isMessageImg}}message--img{{/if}}">
+  <div class="message {{#if isMessageIncoming}}message--incoming{{/if}} {{#if isMessageOutgoing}}message--outgoing{{/if}} {{#if isMessageImg}}message--img{{/if}}">
   
     {{#if isMessageText}}
     <div class="message__text">

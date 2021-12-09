@@ -1,9 +1,15 @@
-import Handlebars from 'handlebars';
-import avatarTemplate from './avatar.tmpl';
+import Block from '../../modules/block';
+import avatarTmpl from './avatar.tmpl';
 import './avatar.scss';
 
-const avatar = Handlebars.compile(avatarTemplate);
+export class Avatar extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
 
-Handlebars.registerPartial('avatar', avatar);
+  render(): Element {
+    // @ts-ignore
+    return this.compile(avatarTmpl, this.props);
+  }
+}
 
-export default avatar;

@@ -6,8 +6,8 @@
     "declaration": false,
     "module": "commonjs",
 
-    "noImplicitAny": false,
-    "noUnusedLocals": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
     "strictNullChecks": true,

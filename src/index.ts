@@ -1,36 +1,42 @@
 import './scss/styles.scss';
-import { Login } from './pages/auth/login/login';
 import { render } from './utils/renderDOM';
-// import login from './pages/auth/login/login';
-// import registration from './pages/auth/registration/registration';
-// import profile from './pages/profile/profile';
-// import profileUpdatePassword from './pages/profile/profile-update-password/profile-update-password';
-// import chats from './pages/chats/chats';
-// import error404 from './pages/error/error-404/error-404';
-// import error500 from './pages/error/error-500/error-500';
+import { Login } from './pages/auth/login/login';
+import { Registration } from './pages/auth/registration/registration';
+import { Chats } from './pages/chats/chats';
+import { Error404 } from './pages/error/error-404/error-404';
+import { Error500 } from './pages/error/error-500/error-500';
+import { Profile } from './pages/profile/profile';
+import { ProfileUpdatePassword } from './pages/profile/profile-update-password/profile-update-password';
 
-const output: string = '#output';
+const root: string = '#root';
 
 window.addEventListener('hashchange', () => {
   const currentURL = location.hash;
+
   switch (currentURL) {
     case '#login':
-      render(output, new Login())
+      render(root, new Login())
       break
-    // case '#registration':
-    //   return (view.innerHTML = registration);
-    // case '#profile':
-    //   return (view.innerHTML = profile);
-    // case '#profile-update-password':
-    //   return (view.innerHTML = profileUpdatePassword);
-    // case '#chats':
-    //   return (view.innerHTML = chats);
-    // case '#error404':
-    //   return (view.innerHTML = error404);
-    // case '#error500':
-    //   return (view.innerHTML = error500);
+    case '#registration':
+      render(root, new Registration())
+      break
+    case '#chats':
+      render(root, new Chats())
+      break
+    case '#profile':
+      render(root, new Profile())
+      break
+    case '#profile-update-password':
+      render(root, new ProfileUpdatePassword())
+      break
+    case '#error404':
+      render(root, new Error404())
+      break
+    case '#error500':
+      render(root, new Error500())
+      break
     default:
-      render(output, new Login())
+      render(root, new Error404())
       break
   }
 });

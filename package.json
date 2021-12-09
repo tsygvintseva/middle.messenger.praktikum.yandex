@@ -12,6 +12,7 @@
   "author": "tsygvintseva",
   "license": "ISC",
   "devDependencies": {
+    "@types/uuid": "^8.3.3",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "eslint": "^8.3.0",
@@ -23,7 +24,9 @@
     "parcel-bundler": "^1.12.5",
     "prettier": "2.4.1",
     "sass": "^1.43.4",
-    "typescript": "^4.5.2"
+    "stylelint": "^14.1.0",
+    "typescript": "^4.5.2",
+    "uuid": "^8.3.2"
   },
   "dependencies": {
     "handlebars": "^4.7.7"

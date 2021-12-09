@@ -1,9 +1,14 @@
-import * as Handlebars from 'handlebars';
-import avatarModalTemplate from './avatar-modal.tmpl';
+import Block from '../../modules/block';
+import avatarModalTmpl from './avatar-modal.tmpl';
 import './avatar-modal.scss';
 
-const avatarModal = Handlebars.compile(avatarModalTemplate);
+export class AvatarModal extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
 
-Handlebars.registerPartial('avatarModal', avatarModal);
-
-export default avatarModal;
+  render(): Element {
+    // @ts-ignore
+    return this.compile(avatarModalTmpl, this.props);
+  }
+}

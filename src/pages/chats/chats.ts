@@ -1,16 +1,12 @@
-import * as Handlebars from 'handlebars';
-import chatsTemplate from './chats.tmpl';
+import Block from '../../modules/block';
+import chatTemplate from './chats.tmpl';
+import { MessageForm } from '../../components/message-form/message-form';
+import '../../components/chat/chat';
+import '../../components/message/message';
 import './chats.scss';
-import '../../components/search/search';
-import '../../components/chat-dialogue/chat-dialogue';
-import '../../components/message-incoming/message-incoming';
-import '../../components/message-outgoing/message-outgoing';
-import '../../components/message-form/message-form';
 
-const chats = Handlebars.compile(chatsTemplate);
-
-const data = {
-  chatDialogue: [
+const CHATS_DATA = {
+  chat: [
     {
       chatName: 'Андрей',
       chatImg: true,
@@ -26,7 +22,8 @@ const data = {
       chatName: 'Илья',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
       chatUnread: true,
       chatUnreadCount: 4,
     },
@@ -39,99 +36,112 @@ const data = {
       chatName: 'тет-а-теты',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: '1, 2, 3',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: 'Design Destroyer',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: 'Day.',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: 'тет-а-теты',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: '1, 2, 3',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: 'Design Destroyer',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
     {
       chatName: 'Day.',
       chatMessage: true,
       chatMessageText:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
     },
   ],
   chatName: 'Вадим',
   chatsUtilsModal: true,
   chatsAttachFile: true,
   chatsDate: '19 июня',
-  messageIncoming: [
+  message: [
     {
+      isMessageIncoming: true,
       isMessageText: true,
       messageText:
-        'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то ' +
-        'момент попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все ' +
-        'знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все ' +
-        'еще находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n' +
-        '\n' +
-        'Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так ' +
-        'никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе ' +
-        'за 45000 евро.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
       messageTime: '11:56',
     },
     {
+      isMessageIncoming: true,
       isMessageImg: true,
       messageTime: '11:56',
     },
     {
+      isMessageIncoming: true,
       isMessageText: true,
       messageText:
-        'Привет! Смотри, тут всплыл интересный кусок лунной космической истории — НАСА в какой-то момент ' +
-        'попросила Хассельблад адаптировать модель SWC для полетов на Луну. Сейчас мы все знаем что ' +
-        'астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще находятся ' +
-        'на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой.\n' +
-        '\n' +
-        'Хассельблад в итоге адаптировал SWC для космоса, но что-то пошло не так и на ракету они так ' +
-        'никогда и не попали. Всего их было произведено 25 штук, одну из них недавно продали на аукционе ' +
-        'за 45000 евро.',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+        'Fusce cursus egestas tortor, ut placerat mauris rutrum a.',
       messageTime: '11:56',
     },
     {
+      isMessageIncoming: true,
       isMessageImg: true,
       messageTime: '11:56',
     },
-  ],
-  messageOutgoing: [
     {
+      isMessageOutgoing: true,
       isMessageText: true,
       messageText: 'Круто!',
       messageTime: '12:00',
       isMessageRead: true,
     },
   ],
-};
+  messageForm: new MessageForm()
+}
 
-export default chats(data);
+export class Chats extends Block {
+  constructor(props?: any) {
+    super(props);
+  }
+
+  componentDidMount(): void {
+    this.setProps(CHATS_DATA);
+  }
+
+  render(): Element {
+    // @ts-ignore
+    return this.compile(chatTemplate, this.props);
+  }
+}
