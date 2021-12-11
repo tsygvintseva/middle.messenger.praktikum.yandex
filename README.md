@@ -1,3 +1,4 @@
+https://github.com/tsygvintseva/middle.messenger.praktikum.yandex/pull/2
 
 [Демо Netlify](https://brave-archimedes-138cb0.netlify.app)
 
@@ -17,8 +18,6 @@
 Запустите `npm run build`, чтобы собрать проект. Скомпилированные файлы будут храниться в каталоге `dist/`.
 
 ## Запуск проекта
-
-Запустите `npm run serve` для запуска проекта.
 
 
 ### Sprint 1 
