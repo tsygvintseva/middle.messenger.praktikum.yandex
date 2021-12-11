@@ -19,3 +19,20 @@
 ## Запуск проекта
 
 Запустите `npm run serve` для запуска проекта.
+
+
+### Sprint 1 
+ 
+- Parcel;
+- SCSS;
+- Handlebars;
+- Express;
+
+### Sprint 2
+
+- TypeScript;
+- ESLint, Stylelint;
+- Event Bus;
+- Block;
+- Http-request;
+- Form validation;

@@ -1,15 +1,21 @@
 import Block from '../../../modules/block';
 import registrationTmpl from './registration.tmpl';
+import FormValidator from '../../../modules/form-validator';
 import { Input } from '../../../components/input/input';
 import { Button } from '../../../components/button/button';
 import '../auth.scss';
+
+const validator = new FormValidator();
 
 const EMAIL = {
   label: 'Почта',
   type: 'email',
   name: 'email',
   required: true,
-  validationError: 'Поле не заполнено',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const LOGIN = {
@@ -18,6 +24,10 @@ const LOGIN = {
   name: 'login',
   required: true,
   validationError: 'Неверный логин',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const NAME = {
@@ -25,7 +35,10 @@ const NAME = {
   type: 'text',
   name: 'first_name',
   required: true,
-  validationError: 'Поле не заполнено',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const LAST_NAME = {
@@ -33,7 +46,10 @@ const LAST_NAME = {
   type: 'text',
   name: 'second_name',
   required: true,
-  validationError: 'Поле не заполнено',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const PHONE = {
@@ -41,7 +57,10 @@ const PHONE = {
   type: 'tel',
   name: 'phone',
   required: true,
-  validationError: 'Поле не заполнено',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const PASSWORD = {
@@ -49,7 +68,10 @@ const PASSWORD = {
   type: 'password',
   name: 'password',
   required: true,
-  validationError: 'Неверный пароль',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const PASSWORD_REPEAT = {
@@ -62,7 +84,10 @@ const PASSWORD_REPEAT = {
 
 const BUTTON = {
   buttonText: 'Зарегистрироваться',
-  buttonType: 'submit'
+  buttonType: 'submit',
+  events: {
+    click: (evt: MouseEvent) => validator.onSubmit(evt, evt.target),
+  },
 }
 
 const FORM_DATA = {

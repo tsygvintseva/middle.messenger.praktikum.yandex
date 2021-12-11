@@ -39,14 +39,3 @@
     opacity: 0;
   }
 }
-
-.message-form__submit {
-  width: 28px;
-  height: 28px;
-  transform: rotate(180deg);
-  background-image: url("/img/icon-arrow-back.svg");
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-}

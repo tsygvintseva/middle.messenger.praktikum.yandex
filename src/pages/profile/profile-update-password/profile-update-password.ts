@@ -1,9 +1,12 @@
 import Block from '../../../modules/block';
 import profileUpdatePasswordTmpl from './profile-update-password.tmpl';
+import FormValidator from '../../../modules/form-validator';
 import { Avatar } from '../../../components/avatar/avatar';
+import { InputProfile } from '../../../components/input-profile/input-profile';
 import { Button } from '../../../components/button/button';
 import '../profile.scss';
-import { InputProfile } from '../../../components/input-profile/input-profile';
+
+const validator = new FormValidator();
 
 const OLD_PASSWORD = {
   label: 'Старый пароль',
@@ -12,11 +15,15 @@ const OLD_PASSWORD = {
   value: '123',
 }
 
-const NEW_PASSWORD = {
+const PASSWORD = {
   label: 'Новый пароль',
   type: 'password',
-  name: 'newPassword',
+  name: 'password',
   value: '123',
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const CONFIRM_PASSWORD = {
@@ -28,14 +35,17 @@ const CONFIRM_PASSWORD = {
 
 const BUTTON = {
   buttonText: 'Сохранить',
-  buttonType: 'submit'
+  buttonType: 'submit',
+  events: {
+    click: (evt: MouseEvent) => validator.onSubmit(evt, evt.target),
+  },
 }
 
 const PROFILE_DATA = {
   avatar: new Avatar(),
   button: new Button(BUTTON),
   oldPassword: new InputProfile(OLD_PASSWORD),
-  newPassword: new InputProfile(NEW_PASSWORD),
+  password: new InputProfile(PASSWORD),
   confirmPassword: new InputProfile(CONFIRM_PASSWORD)
 }
 

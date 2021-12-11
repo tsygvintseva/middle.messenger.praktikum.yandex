@@ -5,11 +5,21 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 17px;
+
+  &.invalid {
+    & .field__input {
+      border-bottom: 1px solid #f44336;
+    }
+
+    & .field__error {
+      display: block;
+    }
+  }
 }
 
 .field__label {
   position: absolute;
-  bottom: 7px;
+  top: 17px;
   font-weight: 500;
   font-size: 13px;
   line-height: 13px;
@@ -44,9 +54,6 @@
 }
 
 .field__error {
-  position: absolute;
-  top: 100%;
-  display: none;
   margin-top: 7px;
   font-weight: 400;
   font-size: 8px;

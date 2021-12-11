@@ -1,5 +1,5 @@
 export default `
-  <button class="button" type="{{buttonType}}">
+  <button class="button {{#if isMessageForm}}button--message-form{{/if}} type="{{buttonType}}">
     {{buttonText}}
   </button>
 `;

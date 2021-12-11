@@ -20,6 +20,8 @@ export default `
           {{{username}}}
           {{{phone}}}
         </div>
+        
+        {{{button}}}
       </form>
 
       {{#if profileNotChange}} 
@@ -35,8 +37,6 @@ export default `
         </li>
       </ul>
     {{else}}
-    
-    {{{button}}}
     
     {{/if}}
     

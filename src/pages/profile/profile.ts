@@ -1,16 +1,23 @@
 import Block from '../../modules/block';
 import profileTmpl from './profile.tmpl';
+import FormValidator from '../../modules/form-validator';
 import { Avatar } from '../../components/avatar/avatar';
 import { InputProfile } from '../../components/input-profile/input-profile';
 import { Button } from '../../components/button/button';
 import './profile.scss';
+
+const validator = new FormValidator();
 
 const EMAIL = {
   label: 'Почта',
   type: 'email',
   name: 'email',
   value: 'pochta@yandex.ru',
-  disabled: true,
+  // disabled: true,
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const LOGIN = {
@@ -18,7 +25,11 @@ const LOGIN = {
   type: 'text',
   name: 'login',
   value: 'ivanivanov',
-  disabled: true,
+  // disabled: true,
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const NAME = {
@@ -26,7 +37,11 @@ const NAME = {
   type: 'text',
   name: 'first_name',
   value: 'Иван',
-  disabled: true,
+  // disabled: true,
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const LAST_NAME = {
@@ -34,7 +49,11 @@ const LAST_NAME = {
   type: 'text',
   name: 'second_name',
   value: 'Иванов',
-  disabled: true,
+  // disabled: true,
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const USERNAME = {
@@ -42,7 +61,7 @@ const USERNAME = {
   type: 'text',
   name: 'display_name',
   value: 'Иван',
-  disabled: true,
+  // disabled: true,
 }
 
 const PHONE = {
@@ -50,18 +69,25 @@ const PHONE = {
   type: 'tel',
   name: 'phone',
   value: '+7 (909) 967 30 30',
-  disabled: true,
+  // disabled: true,
+  events: {
+    focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
+    focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
+  },
 }
 
 const BUTTON = {
   buttonText: 'Сохранить',
-  buttonType: 'submit'
+  buttonType: 'submit',
+  events: {
+    click: (evt: MouseEvent) => validator.onSubmit(evt, evt.target),
+  },
 }
 
 const PROFILE_DATA = {
   avatar: new Avatar(),
   name: 'Иван',
-  profileNotChange: true,
+  // profileNotChange: true,
   email: new InputProfile(EMAIL),
   login: new InputProfile(LOGIN),
   firstName: new InputProfile(NAME),

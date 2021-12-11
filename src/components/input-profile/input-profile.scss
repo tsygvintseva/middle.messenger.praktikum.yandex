@@ -4,13 +4,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 8px 0;
   font-size: 13px;
   line-height: 13px;
   border-bottom: 1px solid $light-gray;
 
+  &.invalid {
+    & input {
+      margin-bottom: 7px;
+    }
+  }
+
   & span {
     margin-right: 20px;
+  }
+
+  &.invalid {
+    span {
+      color: $alert;
+    }
   }
 
   &:first-of-type {
@@ -35,4 +48,12 @@
       outline: none;
     }
   }
+}
+
+.input-profile__error {
+  width: 100%;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 8px;
+  color: $alert;
 }

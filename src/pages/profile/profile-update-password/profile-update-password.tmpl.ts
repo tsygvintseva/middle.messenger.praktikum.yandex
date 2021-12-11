@@ -10,13 +10,12 @@ export default `
         
         <div class="profile__wrapper profile__wrapper--password">
           {{{oldPassword}}}
-          {{{newPassword}}}
+          {{{password}}}
           {{{confirmPassword}}}
         </div>
+        
+        {{{button}}}
       </form>
-      
-      {{{button}}}
-      
     </section>
   </div>
 `;

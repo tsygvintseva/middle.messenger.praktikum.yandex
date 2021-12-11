@@ -83,7 +83,7 @@ export default abstract class Block {
     return this._element.firstElementChild;
   }
 
-  getContent(): HTMLElement {
+  getContent(): Node {
     return this.element as HTMLElement;
   }
 
@@ -92,14 +92,17 @@ export default abstract class Block {
     this._removeEvents();
     this._element.textContent = '';
     this._element.appendChild(block);
-    this._addEvents();
   }
 
-  _addEvents(): void {
+
+  _addEvents(element: Element | null): void {
     const { events = {} } = this.props;
 
     Object.keys(events).forEach(eventName => {
-      this._element.addEventListener(eventName, events[eventName]);
+      if (element) {
+        element.addEventListener(eventName, events[eventName]);
+      }
+      this.element?.addEventListener(eventName, events[eventName]);
     });
   }
 
@@ -165,14 +168,10 @@ export default abstract class Block {
       stub.replaceWith(component.render());
     });
 
+    if (props.events) {
+      this._addEvents(fragment.content.firstElementChild);
+    }
+
     return fragment.content.firstElementChild;
-  }
-
-  show(): void {
-    this.getContent().style.display = 'block';
-  }
-
-  hide(): void {
-    this.getContent().style.display = 'none';
   }
 }
