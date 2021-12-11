@@ -16,10 +16,11 @@ type Data = { [key: string]: any };
 
 function queryStringify(data: Data) {
   if (typeof data !== 'object') {
-    throw new Error('Data must be object');
+    throw new Error('Данные должны быть типа object');
   }
 
   const keys = Object.keys(data);
+
   return keys.reduce((result, key, index) => {
     return `${result}${key}=${data[key]}${index < keys.length - 1 ? '&' : ''}`;
   }, '?');
@@ -63,7 +64,7 @@ class HTTPTransport {
 
     return new Promise(function (resolve, reject) {
       if (!method) {
-        reject('No method');
+        reject('Нет метода');
         return;
       }
 

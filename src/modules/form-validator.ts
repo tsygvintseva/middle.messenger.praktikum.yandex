@@ -26,6 +26,7 @@ export default class FormValidator {
     if (input.classList.contains('input-js')) {
       const field = input.closest('.input-field-js') as HTMLDivElement;
       const error = field.querySelector('.input-error-js') as HTMLSpanElement;
+
       if (data[input.name]) {
         const regExp = data[input.name].regExp;
 
