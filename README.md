@@ -19,6 +19,7 @@ https://github.com/tsygvintseva/middle.messenger.praktikum.yandex/pull/2
 
 ## Запуск проекта
 
+Запустите `npm run serve` для запуска проекта.
 
 ### Sprint 1 
  
