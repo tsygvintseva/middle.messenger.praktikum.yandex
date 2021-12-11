@@ -8,7 +8,6 @@ export class Button extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(buttonTmpl, this.props);
+    return <Element>this.compile(buttonTmpl, this.props);
   }
 }

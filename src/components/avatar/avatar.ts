@@ -8,8 +8,7 @@ export class Avatar extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(avatarTmpl, this.props);
+    return <Element>this.compile(avatarTmpl, this.props);
   }
 }
 

@@ -112,7 +112,6 @@ export class Registration extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(registrationTmpl, this.props);
+    return <Element>this.compile(registrationTmpl, this.props);
   }
 }

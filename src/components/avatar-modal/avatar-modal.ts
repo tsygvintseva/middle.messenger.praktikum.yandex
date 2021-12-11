@@ -8,7 +8,6 @@ export class AvatarModal extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(avatarModalTmpl, this.props);
+    return <Element>this.compile(avatarModalTmpl, this.props);
   }
 }

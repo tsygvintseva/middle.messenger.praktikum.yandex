@@ -28,7 +28,6 @@ export class MessageForm extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(messageFormTmpl, this.props);
+    return <Element>this.compile(messageFormTmpl, this.props);
   }
 }

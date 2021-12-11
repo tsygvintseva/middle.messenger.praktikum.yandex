@@ -25,7 +25,6 @@ const LOGIN = {
   type: 'text',
   name: 'login',
   value: 'ivanivanov',
-  // disabled: true,
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -37,7 +36,6 @@ const NAME = {
   type: 'text',
   name: 'first_name',
   value: 'Иван',
-  // disabled: true,
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -49,7 +47,6 @@ const LAST_NAME = {
   type: 'text',
   name: 'second_name',
   value: 'Иванов',
-  // disabled: true,
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -61,7 +58,6 @@ const USERNAME = {
   type: 'text',
   name: 'display_name',
   value: 'Иван',
-  // disabled: true,
 }
 
 const PHONE = {
@@ -69,7 +65,6 @@ const PHONE = {
   type: 'tel',
   name: 'phone',
   value: '+7 (909) 967 30 30',
-  // disabled: true,
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -87,7 +82,6 @@ const BUTTON = {
 const PROFILE_DATA = {
   avatar: new Avatar(),
   name: 'Иван',
-  // profileNotChange: true,
   email: new InputProfile(EMAIL),
   login: new InputProfile(LOGIN),
   firstName: new InputProfile(NAME),
@@ -107,7 +101,6 @@ export class Profile extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(profileTmpl, this.props);
+    return <Element>this.compile(profileTmpl, this.props);
   }
 }

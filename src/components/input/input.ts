@@ -8,7 +8,6 @@ export class Input extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(inputTmpl, this.props);
+    return <Element>this.compile(inputTmpl, this.props);
   }
 }

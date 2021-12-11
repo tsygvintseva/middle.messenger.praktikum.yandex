@@ -56,7 +56,6 @@ export class Login extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(loginTmpl, this.props);
+    return <Element>this.compile(loginTmpl, this.props);
   }
 }

@@ -59,7 +59,6 @@ export class ProfileUpdatePassword extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(profileUpdatePasswordTmpl, this.props);
+    return <Element>this.compile(profileUpdatePasswordTmpl, this.props);
   }
 }

@@ -8,7 +8,6 @@ export class InputProfile extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(inputProfileTmpl, this.props);
+    return <Element>this.compile(inputProfileTmpl, this.props);
   }
 }

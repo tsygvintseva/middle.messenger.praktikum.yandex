@@ -141,7 +141,6 @@ export class Chats extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(chatTemplate, this.props);
+    return <Element>this.compile(chatTemplate, this.props);
   }
 }

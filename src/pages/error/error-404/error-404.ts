@@ -17,7 +17,6 @@ export class Error404 extends Block {
   }
 
   render(): Element {
-    // @ts-ignore
-    return this.compile(errorTmpl, this.props);
+    return <Element>this.compile(errorTmpl, this.props);
   }
 }
