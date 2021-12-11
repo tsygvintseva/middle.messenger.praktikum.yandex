@@ -14,16 +14,14 @@
     & input {
       margin-bottom: 7px;
     }
+
+    span {
+      color: $alert;
+    }
   }
 
   & span {
     margin-right: 20px;
-  }
-
-  &.invalid {
-    span {
-      color: $alert;
-    }
   }
 
   &:first-of-type {

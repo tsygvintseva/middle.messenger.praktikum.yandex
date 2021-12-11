@@ -16,17 +16,17 @@
 
   &--incoming {
     background: $message-incoming;
-    border-radius: 0 12px 12px 12px;
+    border-radius: 0 12px 12px;
 
     & .message__info {
-      color: $message;
+      color: $secondary-text-color;
     }
   }
 
   &--outgoing {
     float: right;
     background: $selected;
-    border-radius: 12px 12px 0 12px;
+    border-radius: 12px 12px 0;
 
     & .message__info {
       display: flex;
@@ -86,11 +86,11 @@
       border: 1px solid $message-incoming;
 
       & img {
-        border-radius: 0 12px 12px 12px;
+        border-radius: 0 12px 12px;
       }
 
       & .message__info {
-        background: rgba(82, 82, 82, 0.5);
+        background: rgba(82, 82, 82, 50%);
       }
     }
 
@@ -99,7 +99,7 @@
       border: 1px solid $selected;
 
       & img {
-        border-radius: 12px 12px 0 12px;
+        border-radius: 12px 12px 0;
       }
 
       & .message__info {

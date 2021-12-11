@@ -26,13 +26,13 @@
   padding: 10px 20px;
   font-size: 12px;
   line-height: 12px;
-  color: $message;
+  color: $secondary-text-color;
   background: $gray-background;
   border-radius: 30px;
   border: none;
 
   &::placeholder {
-    color: $message;
+    color: $secondary-text-color;
   }
 
   &:focus::placeholder {

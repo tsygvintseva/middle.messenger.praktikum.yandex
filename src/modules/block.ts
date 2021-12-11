@@ -94,7 +94,6 @@ export default abstract class Block {
     this._element.appendChild(block);
   }
 
-
   _addEvents(element: Element | null): void {
     const { events = {} } = this.props;
 
