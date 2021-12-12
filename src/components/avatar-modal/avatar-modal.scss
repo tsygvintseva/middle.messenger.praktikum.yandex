@@ -1,9 +1,8 @@
-
-.avatar__upload {
+.avatar-modal {
   padding: 40px 30px;
 }
 
-.avatar__upload-file {
+.avatar-modal__file {
   width: 50%;
   margin: 0 auto 45px;
   line-height: 16px;
@@ -22,7 +21,7 @@
   }
 }
 
-.avatar__upload-title {
+.avatar-modal__title {
   display: block;
   margin: 0 0 43px;
   font-size: 15px;
@@ -34,11 +33,11 @@
   }
 }
 
-.avatar__upload-button {
+.avatar-modal__button {
   position: relative;
 }
 
-.avatar__upload-error {
+.avatar-modal__error {
   position: absolute;
   top: 100%;
   left: 50%;

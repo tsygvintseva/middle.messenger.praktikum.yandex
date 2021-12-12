@@ -12,7 +12,6 @@ const LOGIN = {
   type: 'text',
   name: 'login',
   required: true,
-  validationError: 'Неверный логин',
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -24,7 +23,6 @@ const PASSWORD = {
   type: 'password',
   name: 'password',
   required: true,
-  validationError: 'Неверный пароль',
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),

@@ -23,7 +23,6 @@ const LOGIN = {
   type: 'text',
   name: 'login',
   required: true,
-  validationError: 'Неверный логин',
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
@@ -79,7 +78,6 @@ const PASSWORD_REPEAT = {
   type: 'passwordRepeat',
   name: 'passwordRepeat',
   required: true,
-  validationError: 'Пароли не совпадают',
 }
 
 const BUTTON = {

@@ -13,7 +13,6 @@ const EMAIL = {
   type: 'email',
   name: 'email',
   value: 'pochta@yandex.ru',
-  // disabled: true,
   events: {
     focusin: (evt: FocusEvent) => validator.onInputFocus(evt.target),
     focusout: (evt: FocusEvent) => validator.onInputBlur(evt.target),
