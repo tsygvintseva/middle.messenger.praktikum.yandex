@@ -2,18 +2,14 @@ import Block from '../../../modules/block';
 import errorTmpl from './error-500.tmpl';
 import '../error.scss';
 
-const ERROR_DATA = {
-  errorCode: '500',
-  errorDesc: 'Мы уже фиксим',
+interface ErrorProps {
+  code: string,
+  desc: string
 }
 
 export class Error500 extends Block {
-  constructor(props?: any) {
+  constructor(props?: ErrorProps) {
     super(props);
-  }
-
-  componentDidMount(): void {
-    this.setProps(ERROR_DATA);
   }
 
   render(): Element {

@@ -29,7 +29,7 @@ export default `
           </div>
           <button class="chats__utils-btn" aria-label="Настройки чата"></button>
           
-          {{#if chatsUtilsModal}}
+          {{#if isChatsUtilsModal}}
           <div class="chat-utils">
               <div class="chat-utils__content">
                 <button class="chat-utils__btn chat-utils__btn--add">Добавить пользователя</button>

@@ -8,10 +8,6 @@
   margin: 0 auto;
   border-radius: 50%;
 
-  & input {
-    display: none;
-  }
-
   &:hover .avatar__change {
     display: flex;
   }

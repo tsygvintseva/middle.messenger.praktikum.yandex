@@ -1,6 +1,6 @@
 export default `
   <form class="message-form">
-    <div class='chat-utils chat-utils--attach-file'>
+    <div class="chat-utils chat-utils--attach-file">
       <div class="chat-utils__content">
         <label class="chat-utils__btn chat-utils__btn--photo">Фото или Видео
           <input type="file">

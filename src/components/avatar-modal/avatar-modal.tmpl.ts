@@ -1,24 +1,24 @@
 export default `
-  {{#if avatarModal}}
+  {{#if isModal}}
   <div class="overlay">
     <div class="card avatar-modal">
 
-      {{#if avatarUpload}} 
+      {{#if isUploaded}} 
       <p class="avatar-modal__title">Файл загружен</p>
       {{else}}
       <p class="avatar-modal__title">Загрузите файл</p>
       {{/if}}
       
-      {{#if avatarUploadError}} 
+      {{#if isUploadError}} 
       <p class="avatar-modal__title avatar-modal__title--error">Ошибка, попробуйте ещё раз</p>
       {{/if}}
 
       <form>
         <div class="avatar-modal__file">
-          {{#if avatarUpload}} 
-          <span>{{avatarFileName}}</span>
+          {{#if isUploaded}} 
+          <span class="avatar-modal__file-name">{{fileName}}</span>
           {{else}}
-          <label>
+          <label class="avatar-modal__file-choose">
             Выбрать файл на компьютере
             <input type="file" name="avatar">
           </label>
@@ -30,7 +30,7 @@ export default `
             Поменять
           </button>
           
-          {{#if avatarValidationError}} 
+          {{#if isValidationError}} 
           <span class="avatar-modal__error">Нужно выбрать файл</span>
           {{/if}}
         </div>

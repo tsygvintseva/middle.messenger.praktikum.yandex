@@ -2,8 +2,14 @@ import Block from '../../modules/block';
 import buttonTmpl from './button.tmpl';
 import './button.scss';
 
+interface ButtonProps {
+  type: string;
+  text?: string;
+  isMessageForm?: boolean;
+}
+
 export class Button extends Block {
-  constructor(props?: any) {
+  constructor(props?: ButtonProps) {
     super(props);
   }
 

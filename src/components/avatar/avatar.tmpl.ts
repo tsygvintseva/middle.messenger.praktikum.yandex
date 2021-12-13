@@ -1,6 +1,6 @@
 export default `
   <div class="avatar">
-    {{#if avatar}} 
+    {{#if isAvatar}} 
     <img src="" class="avatar__img">
     {{else}}
     <span class="avatar__img avatar__img--empty"></span>

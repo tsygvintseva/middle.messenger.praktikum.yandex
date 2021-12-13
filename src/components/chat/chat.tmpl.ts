@@ -7,19 +7,19 @@ export default `
           <div class="chat__message">
           
             <p>
-              {{#if chatYourMessage}}
+              {{#if isChatYourMessage}}
               <span class="chat__you">Вы: </span>
               {{/if}}
               
-              {{#if chatMessage}}
+              {{#if isChatMessage}}
               <span>{{chatMessageText}}</span>
               {{/if}}
               
-              {{#if chatImg}}
+              {{#if isChatImg}}
               <span>Изображение</span>
               {{/if}}
               
-              {{#if chatSticker}}
+              {{#if isChatSticker}}
               <span>Стикер</span>
               {{/if}}
               
@@ -29,7 +29,7 @@ export default `
     <div class="chat__info">
         <span class="chat__time">15:12</span>
         
-        {{#if chatUnread}}
+        {{#if isChatUnread}}
         <span class="chat__count">{{chatUnreadCount}}</span>
         {{/if}}
         
