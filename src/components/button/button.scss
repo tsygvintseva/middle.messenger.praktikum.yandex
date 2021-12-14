@@ -5,13 +5,25 @@
   margin: 0 auto;
   padding: 12px 30px;
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 13px;
   line-height: 13px;
   font-weight: 500;
   color: $white;
-  background: $primary-blue;
+  background-color: $primary-blue;
   border-radius: 8px;
   border: none;
   cursor: pointer;
+
+  &--message-form {
+    margin: 0;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    transform: rotate(180deg);
+    background-image: url("/img/icon-arrow-back.svg");
+    background-color: transparent;
+    border-radius: 50%;
+    border: none;
+  }
 }

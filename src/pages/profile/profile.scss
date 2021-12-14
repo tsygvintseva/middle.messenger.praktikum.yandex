@@ -5,6 +5,7 @@
   display: flex;
   min-height: 100vh;
   width: 100vw;
+  background: $white;
 }
 
 .profile__button-wrap {
@@ -19,6 +20,7 @@
   background: $gray;
   cursor: pointer;
   border-right: 1px solid $light-gray;
+  box-sizing: border-box;
 }
 
 .profile__link-back {

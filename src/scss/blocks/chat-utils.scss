@@ -1,0 +1,73 @@
+@import "../../scss/variables";
+
+.chat-utils {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  background: $white;
+  border-radius: 12px;
+
+  &--attach-file {
+    top: auto;
+    bottom: 100%;
+    right: auto;
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.chat-utils__content {
+  padding: 7px 0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 14%);
+  border-radius: 12px;
+
+  & input {
+    display: none;
+  }
+}
+
+.chat-utils__btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  font-size: 12px;
+  line-height: 14px;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 15px;
+    width: 22px;
+    height: 22px;
+  }
+
+  &--add::before {
+    background-image: url("/img/icon-add-user.svg");
+  }
+
+  &--delete::before {
+    background-image: url("/img/icon-delete-user.svg");
+  }
+
+  &--photo::before {
+    background-image: url("/img/icon-photo.svg");
+  }
+
+  &--file::before {
+    background-image: url("/img/icon-file.svg");
+  }
+
+  &--location::before {
+    background-image: url("/img/icon-location.svg");
+  }
+}

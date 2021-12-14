@@ -1,0 +1,41 @@
+@import "../../scss/variables";
+
+.message-form {
+  display: flex;
+  align-items: center;
+}
+
+.message-form__attach-file {
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/icon-attach-file.svg");
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.active,
+  &:hover {
+    background-color: $hover;
+  }
+}
+
+.message-form__input {
+  flex-grow: 1;
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $secondary-text-color;
+  background: $gray-background;
+  border-radius: 30px;
+  border: none;
+
+  &::placeholder {
+    color: $secondary-text-color;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
